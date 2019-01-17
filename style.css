@@ -123,29 +123,24 @@ li.custom-bullet::before {
 }
 
 
+a {
+  color: #B40404;
+}
+
+a:hover {
+  color: #FFFAF0;
+  background-color: #1C1C1C;
+}
+
+
 
 /* ----CLASSES---- */
 
 
 /* flex containers */
-.flex-cont-v-w {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-.flex-cont-v-nw {
-  display: flex;
-  flex-flow: column nowrap;
-}
-
 .flex-cont-h-w {
   display: flex;
   flex-flow: row wrap;
-}
-
-.flex-cont-h-nw {
-  display: flex;
-  flex-flow: row nowrap;
 }
 
 .flex-cont-ordered {
