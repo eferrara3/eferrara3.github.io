@@ -248,7 +248,7 @@ li.custom-bullet::before {
 
 
 /* small screens */
-@media all and (max-width: 600px) {
+@media (max-width: 600px) {
   nav { order: 1; }
   main { order: 2; }
 
@@ -262,9 +262,8 @@ li.custom-bullet::before {
   }
 
   section {
-    padding-bottom: 1rem;
-    padding-left: 1rem!important;
-    padding-right: 1rem!important;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   nav {
@@ -275,7 +274,7 @@ li.custom-bullet::before {
     position: fixed;
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
+    align-content: flex-start;
     flex: 0 1 auto;
     justify-content: stretch;
     align-items: center;
@@ -288,17 +287,22 @@ li.custom-bullet::before {
   .nav-img {
     max-height: 3rem;
     width: auto;
-    margin: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    flex: 0 0 20%;
   }
 
   .nav-ul {
     display: flex;
     flex-flow: row nowrap;
-    align-items: baseline;
+    align-items: center;
+    flex: 0 2 80%;
   }
 
   a.nav-li {
     padding: .5rem;
+    flex: 0 1 15%;
   }
 
   .anchor {
@@ -312,55 +316,28 @@ li.custom-bullet::before {
 
 
 /* very small screens */
-@media all and (max-width: 415px) {
-  main { flex: 3 0px; }
-  nav { order: 1; }
-  main { order: 2; }
-
-  main {
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-top: 5rem;
-    margin-left: 0;
-  }
-
-  section {
-    padding-bottom: 1rem;
-    padding-left: 1rem!important;
-    padding-right: 1rem!important;
-  }
+@media (max-width: 415px) {
 
   nav {
-    padding: 1rem;
-    min-width: 100vw;
     font-size: 10px;
-    position: fixed;
-    display: flex;
-    flex-flow: column wrap;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
   }
 
   .nav-img {
     max-height: 2.7rem;
-    display: flex;
-    width: auto;
+    margin:0;
   }
 
   .nav-ul {
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-between;
-    flex: 0 1 auto;
-    padding-left: 1rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 0 2 80%;
   }
 
   a.nav-li {
-    padding-top: .1rem;
-    padding-bottom: .1rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
     padding-left: .3rem;
     padding-right: .3rem;
   }
