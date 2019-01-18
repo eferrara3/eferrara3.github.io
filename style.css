@@ -11,7 +11,7 @@
 body {
   color: #1C1C1C;
   background-color: #FFFAF0;
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono", Arial;
   font-weight: 300;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -65,7 +65,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 
@@ -73,6 +73,7 @@ h2 {
   font-size: 2rem;
   font-weight: 700;
   padding-bottom: 1rem;
+  text-transform: uppercase;
   display: block;
   order: 1;
 }
@@ -80,7 +81,8 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
   /* padding-bottom: .3rem; */
   display: block;
   order: 2;
@@ -88,8 +90,8 @@ h3 {
 
 
 h4 {
-  font-size: 1.3rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   padding-bottom: .5rem;
   display: block;
   order: 3;
@@ -97,7 +99,7 @@ h4 {
 
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 300;
   display: block;
   order: 4;
@@ -165,8 +167,8 @@ p > a:hover {
 }
 
 .nav-li {
-  font-family: "Open Sans Condensed", sans-serif;
-  font-weight:700;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
   color: #1C1C1C;
   display: block;
   text-transform: uppercase;
@@ -202,9 +204,9 @@ p > a:hover {
 }
 
 .h1-sub {
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 1em;
-  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
   text-transform: none;
   display: block;
 }
