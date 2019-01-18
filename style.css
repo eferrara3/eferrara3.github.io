@@ -223,6 +223,8 @@ p > a:hover {
 
 
 
+
+
 /* ----MEDIA QUERY---- */
 
 
@@ -337,4 +339,59 @@ p > a:hover {
     padding-right: .3rem;
   }
 
+  .reading-timeline-container {
+    max-width: 200px;
+  }
+
+}
+
+
+
+
+
+/* ----CHART---- */
+.reading-timeline {
+  font-size: .75em;
+  height: 10em;
+  text-align: center;
+}
+
+.reading-timeline li {
+  height: 8em;
+  position: relative;
+  padding: 0 .25em 0 .25em;
+  float: left;
+  width: 1.5em;
+  margin: 1em .2em;
+}
+
+.reading-timeline li .month-label {
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: -2em;
+  left: 0;
+  line-height: 2em;
+}
+
+.reading-timeline li .pg-count {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #B40404;
+  color:#CCEEFF;
+}
+
+.reading-timeline li:hover {
+  background: #EFEFEF;
+  font-weight: 500;
+}
+
+.reading-timeline-container {
+  display: flex;
+  flex-flow: row wrap;
 }
