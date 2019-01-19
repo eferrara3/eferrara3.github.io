@@ -251,10 +251,10 @@ a.mailto:hover {
 
 
 /* wrap dates */
-@media all and (max-width: 600px) {
+@media all and (max-width: 750px) {
   h5 {
     margin-top: .2rem;
-    order: 6;
+    order: 6!important;
   }
 }
 
