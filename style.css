@@ -30,7 +30,7 @@ nav {
   text-align: center;
   align-items: center;
   justify-content: center;
-  max-width: 150px;
+  max-width: 170px;
 }
 
 
@@ -39,7 +39,7 @@ main {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
-  margin-left: 150px;
+  margin-left: 170px;
 }
 
 
@@ -155,8 +155,8 @@ p > a:hover {
 /* navigation */
 .nav-img {
   border-radius: 50%;
-  width: 15vw;
-  max-width: 100px;
+  width: 15rem;
+  max-width: 130px;
   margin-bottom: 25px;
   height: auto;
   border: 0.25rem solid rgba(255, 255, 255, 0.5);
