@@ -355,7 +355,7 @@ a.mailto:hover {
   }
 
   .reading-timeline-container {
-    max-width: 200px;
+    max-width: 220px;
   }
 
 }
@@ -376,7 +376,7 @@ a.mailto:hover {
   position: relative;
   padding: 0 .25em 0 .25em;
   float: left;
-  width: 1.5em;
+  width: 2em;
   margin: 1em .2em;
 }
 
