@@ -5,12 +5,20 @@
 * {
   margin: 0;
   padding: 0;
+  /* color of main background and link text on hover */
+  --color-main-1: #F4F4ED;
+  /* color of main text and link background on hover */
+  --color-main-2: #1C1C1C;
+  /* color of navigation and graph element on hover */
+  --color-accent-1: #CDD8E2;
+  /* color of link text, navigation on hover, accent text */
+  --color-accent-2: #E24104;
 }
 
 
 body {
-  color: #1C1C1C;
-  background-color: #FFFAF0;
+  color: var(--color-main-2);
+  background-color: var(--color-main-1);
   font-family: "Roboto Mono", Arial;
   font-weight: 300;
   overflow-y: scroll;
@@ -26,7 +34,7 @@ nav {
   position: fixed;
   height: 100vw;
   width: 20rem;
-  background-color: #CCEEFF;
+  background-color: var(--color-accent-1);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -126,12 +134,12 @@ li.custom-bullet::before {
 
 
 p > a {
-  color: #B40404;
+  color: var(--color-accent-2);
 }
 
 p > a:hover {
-  color: #FFFAF0;
-  background-color: #1C1C1C;
+  color: var(--color-main-1);
+  background-color: var(--color-main-2);
 }
 
 
@@ -169,7 +177,7 @@ p > a:hover {
 .nav-li {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
-  color: #1C1C1C;
+  color: var(--color-main-2);
   display: block;
   text-transform: uppercase;
   padding: 8px 20px;
@@ -177,8 +185,8 @@ p > a:hover {
 }
 
 .nav-li:hover {
-  background-color: #B40404;
-  color: #FFFAF0;
+  background-color: var(--color-accent-2);
+  color: var(--color-main-1);
   display:block;
 }
 
@@ -192,7 +200,7 @@ p > a:hover {
 
 /* text */
 .emp-c {
-  color: #B40404;
+  color: var(--color-accent-2);
 }
 
 .emp-i {
@@ -227,14 +235,14 @@ p > a:hover {
   padding-bottom: .5rem;
 }
 
-a.mailto {
-  color: #1C1C1C;
+/* a.mailto {
+  color: var(--color-main-2);
 }
 
 a.mailto:hover {
-  color: #FFFAF0;
-  background-color: #1C1C1C;
-}
+  color: var(--color-main-1);
+  background-color: var(--color-main-2);
+} */
 
 
 
@@ -397,8 +405,8 @@ a.mailto:hover {
   left: 0;
   width: 100%;
   height: 0;
-  background: #B40404;
-  color:#CCEEFF;
+  background: var(--color-accent-2);
+  color:var(--color-accent-1);
 }
 
 .reading-timeline li:hover {
