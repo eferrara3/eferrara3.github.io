@@ -5,13 +5,13 @@
 * {
   margin: 0;
   padding: 0;
-  /* color of main background and link text on hover */
+  /* main background and link text on hover */
   --color-main-1: #F4F4ED;
-  /* color of main text and link background on hover */
+  /* main text and link background on hover */
   --color-main-2: #1C1C1C;
-  /* color of navigation and graph element on hover */
+  /* navigation */
   --color-accent-1: #CDD8E2;
-  /* color of link text, navigation on hover, accent text */
+  /* link text, navigation on hover, accent text */
   --color-accent-2: #E24104;
 }
 
@@ -170,6 +170,10 @@ p > a:hover {
   border: 0.25rem solid rgba(255, 255, 255, 0.5);
 }
 
+.nav-img:hover {
+  border: 0.25rem solid var(--color-accent-2);
+}
+
 .nav-ul {
   list-style-type: none;
 }
@@ -244,7 +248,10 @@ a.mailto:hover {
   background-color: var(--color-main-2);
 } */
 
-
+.chart-container {
+  width: 60vw;
+  position: relative;
+}
 
 
 /* ----MEDIA QUERY---- */
@@ -254,6 +261,11 @@ a.mailto:hover {
 @media all and (min-width: 1024px) {
   * {
     max-width: 1500px;
+  }
+
+  .chart-container {
+    max-width: 1200px;
+    position: relative;
   }
 }
 
@@ -332,6 +344,11 @@ a.mailto:hover {
     visibility: hidden;
   }
 
+  .chart-container {
+    min-width: 425px;
+    position: relative;
+  }
+
 }
 
 
@@ -362,59 +379,9 @@ a.mailto:hover {
     padding-right: .3rem;
   }
 
-  .reading-timeline-container {
-    max-width: 220px;
+  .chart-container {
+    min-width: 300px;
+    position: relative;
   }
 
-}
-
-
-
-
-
-/* ----CHART---- */
-.reading-timeline {
-  font-size: .75em;
-  height: 10em;
-  text-align: center;
-}
-
-.reading-timeline li {
-  height: 8em;
-  position: relative;
-  padding: 0 .25em 0 .25em;
-  float: left;
-  width: 2em;
-  margin: 1em .2em;
-}
-
-.reading-timeline li .month-label {
-  text-transform: uppercase;
-  display: block;
-  width: 100%;
-  position: absolute;
-  bottom: -2em;
-  left: 0;
-  line-height: 2em;
-}
-
-.reading-timeline li .pg-count {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background: var(--color-accent-2);
-  color:var(--color-accent-1);
-}
-
-.reading-timeline li:hover {
-  background: #EFEFEF;
-  font-weight: 500;
-}
-
-.reading-timeline-container {
-  display: flex;
-  flex-flow: row wrap;
 }

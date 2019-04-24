@@ -12,6 +12,9 @@
     <!-- css sheet -->
     <link href="style.css" rel="stylesheet" type="text/css">
 
+    <!-- Chart.js liibrary -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+
     <!-- fonts -->
     <!-- display -->
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
@@ -115,13 +118,13 @@
           <div class="xs-entry-pad">
             <p class="emp-b">Languages:</p>
             <li>
-              Python, SQL, HTML/CSS, XML, R
+               SQL, Python, HTML/CSS, XML
             </li>
           </div>
           <div class="xs-entry-pad">
             <p class="emp-b">Prioritization & Development Tools:<p>
             <li>
-              Git, Command-line, Pivotal Tracker, Trello, Drupal
+              Git, Command-line, Pivotal Tracker, Trello
             </li>
           </div>
           <div>
@@ -182,58 +185,73 @@
             <a href="https://github.com/eferrara3/fog" rel="noopener noreferrer" target="_blank">Visit the repository</a>
           </p>
         </div>
-        <p class="emp-b">Book Pages Read in 2018:</p>
-        <div class="reading-timeline-container">
-          <ul class="reading-timeline">
-            <li>
-              <span class="month-label">Jan</span>
-              <span class="pg-count" style="height: 63%">1033</span>
-            </li>
-            <li>
-              <span class="month-label">Feb</span>
-              <span class="pg-count" style="height: 64%">1044</span>
-            </li>
-            <li>
-              <span class="month-label">Mar</span>
-              <span class="pg-count" style="height: 19%">307</span>
-            </li>
-            <li>
-              <span class="month-label">Apr</span>
-              <span class="pg-count" style="height: 20%">329</span>
-            </li>
-            <li>
-              <span class="month-label">May</span>
-              <span class="pg-count" style="height: 63%">1041</span>
-            </li>
-            <li>
-              <span class="month-label">Jun</span>
-              <span class="pg-count" style="height: 58%">953</span>
-            </li>
-            <li>
-              <span class="month-label">Jul</span>
-              <span class="pg-count" style="height: 15%">249</span>
-            </li>
-            <li>
-              <span class="month-label">Aug</span>
-              <span class="pg-count" style="height: 40%">650</span>
-            </li>
-            <li>
-              <span class="month-label">Sep</span>
-              <span class="pg-count" style="height: 53%">876</span>
-            </li>
-            <li>
-              <span class="month-label">Oct</span>
-              <span class="pg-count" style="height: 66%">1086</span>
-            </li>
-            <li>
-              <span class="month-label">Nov</span>
-              <span class="pg-count" style="height: 100%">1642</span>
-            </li>
-            <li>
-              <span class="month-label">Dec</span>
-              <span class="pg-count" style="height: 63%">1039</span>
-            </li>
-          </ul>
+
+        <div class="sm-entry-pad">
+          <p class="emp-b">Book Pages Read:</p>
+          <div class="chart-container">
+            <canvas id="bookPagesChart"></canvas>
+          </div>
+          <script>
+            var bookPagesData = {
+              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              datasets: [{
+                label: '2018',
+                backgroundColor: '#E24104',
+                borderColor: '#E24104',
+                fill: false,
+                lineTension: 0,
+                data: [
+                  1033,
+                  1044,
+                  307,
+                  329,
+                  1041,
+                  953,
+                  249,
+                  650,
+                  876,
+                  1086,
+                  1642,
+                  1039
+                ]
+              } , {
+                label: '2019',
+                backgroundColor: '#4B6680',
+                borderColor: '#4B6680',
+                fill: false,
+                lineTension: 0,
+                data: [
+                  440,
+                  463,
+                  530,
+                  963
+                ]
+              }]
+            };
+            Chart.defaults.global.defaultFontFamily = 'Barlow Condensed'
+            Chart.defaults.global.defaultFontColor = '#1C1C1C'
+            var ctx = document.getElementById('bookPagesChart').getContext('2d');
+            var chart = new Chart(ctx, {
+              type: 'line',
+              data: bookPagesData,
+              options: {
+                responsive: true,
+                legend: {
+                  position: 'top',
+                },
+                tooltips: {
+                  mode: 'index',
+                  intersect: false,
+                  backgroundColor: 'rgba(0, 0, 0, 0.5)'
+                },
+                hover: {
+                  mode: 'nearest',
+                  intersect: false
+                }
+              }
+            });
+
+          </script>
         </div>
       </section>
 
