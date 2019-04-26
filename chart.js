@@ -54,7 +54,7 @@ const bookPagesData = {
     // lineTension: .1,
     yAxisID: 'y-axis-2',
     data: cumulativeData2018
-  } , {
+    } , {
     label: '2019',
     backgroundColor: 'rgb(75, 102, 128, 0.5)',
     borderColor: 'rgb(75, 102, 128, 0.5)',
@@ -62,7 +62,7 @@ const bookPagesData = {
     // fill: false,
     // lineTension: 0,
     data: data2019
-  } ,  {
+    } , {
     label: '2019 cumulative',
     type: 'line',
     backgroundColor: '#4B6680',
