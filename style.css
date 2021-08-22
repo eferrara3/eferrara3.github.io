@@ -3,12 +3,11 @@
 /* ----ELEMENTS---- */
 
 * {
-  margin: 0;
-  padding: 0;
   font-size: 16px;
   font-weight: 400;
-  font-family: Arial;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
   /* main background and link text on hover */
   --color-main-1: #F4F4ED;
   /* main text and link background on hover */
@@ -38,7 +37,7 @@ nav {
   padding-top: 55px;
   padding-bottom: 5rem;
   position: fixed;
-  height: 100vw;
+  height: 100%;
   width: 20rem;
   background-color: var(--color-accent-1);
   text-align: center;
@@ -247,7 +246,7 @@ p > a:hover {
 
 
 /* small screens */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   nav { order: 1; }
   main { order: 2; }
 
@@ -255,7 +254,7 @@ p > a:hover {
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-left: 0;
     /* flex: 3 0px; */
   }
@@ -266,39 +265,39 @@ p > a:hover {
   }
 
   nav {
-    padding: 0;
-    max-height: 3.5rem!important;
-    min-width: 100vw;
-    position: fixed;
-    display: flex;
+    padding: 0.5rem;
+    max-height: 5rem!important;
+    min-width: 100%;
     flex-flow: row wrap;
     flex: 1 0 auto;
-    justify-content: center;
-    vertical-align: middle;
   }
 
   h1 {
     font-size: 3em;
   }
 
+  .nav-img {
+    max-width: 3rem;
+    margin: 0.5rem;
+    }
+
   .nav-ul {
-    padding: 1rem;
+    /* padding: .5rem;
     display: flex;
     flex-flow: row wrap;
-    flex: 1 0 auto;
-    vertical-align: middle;
+    flex: 1 1 auto;
+    vertical-align: middle; */
+    visibility: hidden;
   }
 
   .nav-li {
-    flex-flow: row wrap;
-    padding 1rem;
+    margin: 0.1rem;
+    vertical-align: middle;
+    padding: 0.3rem;
+    min-width: 100vw;
+    }
   }
 
-  .nav-img {
-    max-width: 3rem;
-    width: auto;
-    margin: 0 1rem 0 0;
-  }
 
   .anchor {
     display: flex;
@@ -316,7 +315,7 @@ p > a:hover {
 
 
 /* very small screens */
-@media (max-width: 500px) {
+/* @media (max-width: 400px) {
 
   nav {
     font-size: 10px;
@@ -343,6 +342,6 @@ p > a:hover {
   .chart-container {
     min-width: 90%;
     position: relative;
-  }
+  } */
 
 }
